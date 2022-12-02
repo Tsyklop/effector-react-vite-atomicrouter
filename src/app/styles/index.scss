@@ -1,0 +1,158 @@
+$sidebar-menu-width-expanded: 212px;
+
+$sidebar-menu-padding-y: 1.125rem !default;
+$sidebar-menu-padding-x: 1rem !default;
+
+$sidebar-menu-nav-link-margin-y: 0 !default;
+
+@import "bootstrap/scss/bootstrap.scss";
+@import "reseter.css/css/reseter.min.css";
+@import 'react-toastify/dist/ReactToastify.css';
+@import 'react-bootstrap-sidebar-menu/dist/sidebar-menu.scss';
+
+.spa-layout {
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .spa-container {
+
+    overflow-y: auto;
+    flex-grow: 1;
+
+    .spa-content {
+
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      .page-content-wrapper {
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+
+        .page-content {
+          flex-grow: 1;
+          padding: 28px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.header {
+
+  width: 100%;
+  height: 76px;
+  display: flex;
+  padding: 18px 28px;
+  background: #FFFFFF;
+  align-items: center;
+  border-bottom: 1px solid #D9E4F5;
+
+  &-title {
+    color: #141736;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+}
+
+.sidebar-menu {
+
+  padding: $sidebar-menu-padding-y $sidebar-menu-padding-x;
+  background: #FFFFFF;
+  border-right: 1px solid #D9E4F5;
+
+  &-header {
+    height: 40px;
+    padding: 0;
+    position: relative;
+  }
+
+  &-brand {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-toggle {
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    color: #141736;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(105%, 10%);
+    background: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D9E4F5;
+    border-radius: 24px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &-collapse {
+    .show {
+      width: 212px;
+    }
+  }
+
+  &-nav-icon {
+    /*width: 24px;
+    height: 24px;*/
+  }
+
+  &-nav-title {
+    color: #96A9C8;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-left: 0.875rem;
+  }
+
+  &-nav {
+
+    margin-top: 4px;
+
+    .sidebar-menu-nav-link {
+
+      padding: 12px;
+
+      &:hover,
+      &-active {
+
+        background: #F1F5FD;
+        border-radius: 16px;
+
+        .sidebar-menu-nav-title {
+          color: #1E6AFF;
+        }
+
+      }
+
+      &-active {
+        cursor: pointer;
+      }
+
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+}
+
+
